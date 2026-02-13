@@ -1,0 +1,227 @@
+nav{
+  display: flex;
+  background-color: var(--nav-bar-background-color);
+  justify-content: space-between;
+  padding: 0 40px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}nav .logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}nav .logo i{
+  font-size: 30px;
+  color:var(--text-color-purple);
+}nav .logo span{
+  font-size: 35px;
+  background: linear-gradient(to right, #352d67,#ac9adb,#c08497,#9c89b8 , #e07a9a, #ff9db5);
+  color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientFlow 3s ease infinite;
+}
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav ul{
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  position: relative;
+
+}nav ul li{
+  padding: 35px 5px;
+  position: relative;
+  
+}nav ul li::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color:var(--text-color-purple);
+  bottom: 30px;
+  left: 0;
+  transition: 0.3s;
+}
+nav ul li:hover::after{
+  width: 100%;
+}
+nav ul li .dropdown{
+  position: absolute;
+  bottom: -140%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #615474;
+  padding: 15px;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  /* height: 0px; */
+  transition: 0.5s;
+}nav ul li:hover .dropdown{
+  /* height: auto; */
+  /* height: max-content; */
+  opacity: 1;
+  visibility: visible;
+}
+nav ul li .dropdown a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}nav ul li .dropdown a i{
+  color: var(--text-color-white);
+}
+.dropdown a:hover {
+  background: linear-gradient(to right, #473e84, #ac9adb, #c08497);  
+  color: transparent;
+  transform: translate(2px);
+  background-clip: text;
+}nav button{
+  background:linear-gradient(90deg, #352d67, #473e84, #726691);
+  color: var(--text-color-white);
+  font-size: 16px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+}
+nav button:hover {
+  /* background: linear-gradient(90deg, #473e84, #ac9adb, #c08497); */
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(192, 132, 151, 0.35); 
+}nav button:active{
+  transform: translate(3px);
+}
+nav .click{
+  font-size: 20px;
+  color: var(--text-color-white);
+  cursor: pointer;
+  transition: 0.5s;
+  display: none;
+}
+nav .click:hover{
+  color: var(--text-color-purple);
+}nav .click:active{
+  transform: translate(5px);
+}
+#click{
+  display: none;
+}
+nav ul .logo{
+  display: none;
+}
+nav ul .fa-circle-xmark{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 25px;
+  color: red;
+  transition: 0.5s;
+  display:none;
+}nav ul .fa-circle-xmark:hover {
+  color: rgb(138, 25, 25);
+}
+nav ul .fa-circle-xmark:active{
+  transform: translate(3px);
+}
+#click:checked ~ ul {
+  visibility: visible;
+  transform: translateX(0);
+  transition: 0.5s;
+
+}
+.overlay{
+  background-color:#1b1c3d6a;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: none;
+  z-index: 999;
+}
+
+@media (max-width: 850px) {
+  nav > .logo{
+    margin: 20px 0;
+  }
+  nav ul{
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(27, 25, 47, 0.256);
+    padding: 20px;
+    gap: 20px;
+    width: 50%;
+   visibility: hidden;
+   transform: translateX(-100%);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   border-right: 1px solid rgba(172, 154, 219, 0.1);
+   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
+   z-index: 1000;
+  } nav ul li{
+    width: max-content;
+    padding: 10px;
+  }
+  nav ul li::after{
+    bottom: 0px;
+  }
+  nav ul li .dropdown{
+    bottom: -350%;
+  }
+  nav .click{
+    display: inline-block;
+  }
+  nav ul .logo{
+    display: block;
+  }
+  nav ul .fa-circle-xmark{
+    display: inline;
+  }
+  #click:checked ~ .overlay{
+  display: block;
+}
+}
+
+@media (max-width : 480px) {
+    nav button{
+      display: none;
+    }
+    nav ul .logo span{
+      font-size: 25px;
+    }nav ul .logo i{
+      font-size: 20px;
+    }
+}@media (max-width : 350px) {
+    nav .logo span{
+      font-size: 25px;
+    }nav .logo i{
+      font-size: 20px;
+    }
+    nav ul{
+      width: 70%;
+    }
+}@media (max-width : 250px){
+  nav{
+    padding: 5px;
+  }
+  nav ul{
+      width: 90%;
+  }
+}
