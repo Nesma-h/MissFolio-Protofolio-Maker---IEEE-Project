@@ -1,7 +1,6 @@
  .reviews {
       margin-top: 50px;
       color: var(--text-color-white);
-      height: 45vh;
   }
 
   .reviews .reviews-header {
@@ -13,6 +12,8 @@
   .reviews .reviews-container {
       display: flex;
       justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
       padding: 0 20px;
   }
 
@@ -170,15 +171,16 @@
       }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
       .reviews .reviews-container {
           flex-direction: column;
           gap: 15px;
+          align-items: center;
       }
 
       .reviews .reviews-card {
           width: 100%;
-          max-width: 100%;
+          max-width: 400px;
       }
 
       .reviews .reviews-card img {
@@ -194,3 +196,4 @@
           font-size: 12px;
       }
   }
+
