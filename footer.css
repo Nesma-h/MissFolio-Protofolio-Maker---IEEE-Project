@@ -2,7 +2,7 @@ footer {
   background: var(--section-background-color);
   color: var(--text-color-white);
   padding: 40px 20px;
-  margin-top: 200px;
+  overflow: hidden;
 }
 
 .footer-container {
@@ -45,6 +45,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 15px;
+  
 }.footer-section ul li i:nth-of-type(1) {
   font-size: 17px;
   color: var(--text-color-purple);
@@ -74,13 +75,6 @@ footer {
   font-size: 0.9rem;
   opacity: 0.8;
 }
-footer,
-.footer-container,
-.footer-bottom {
-  overflow: hidden;
-  position: relative;
-  z-index: -1;            
-}
 
 
 @media (max-width: 850px) {
@@ -89,3 +83,10 @@ footer,
     align-items: center;
   }
 }
+/* footer,
+.footer-container,
+.footer-bottom {
+  overflow: hidden;
+  position: relative;
+  z-index: -1;            
+} */
