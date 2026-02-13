@@ -1,4 +1,26 @@
- .reviews {
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Fira Sans", sans-serif;
+  }
+
+  :root {
+      --nav-bar-background-color: #1b192f;
+      --body-background-color: #14152a;
+      --section-background-color: #1b1c3a;
+      --button-background-color: #352d67;
+      --text-color-purple: #ac9adb;
+      --text-color-white: #f3f1fe;
+  }
+
+  body {
+      background-color: var(--body-background-color);
+  }
+
+  .reviews {
       margin-top: 50px;
       color: var(--text-color-white);
   }
@@ -173,19 +195,20 @@
 
   @media screen and (max-width: 768px) {
       .reviews .reviews-container {
-          flex-direction: column;
           gap: 15px;
-          align-items: center;
       }
 
       .reviews .reviews-card {
           width: 100%;
           max-width: 400px;
+          flex-direction: column;
+          align-items: center;
       }
 
       .reviews .reviews-card img {
           width: 70px;
           height: 70px;
+          margin-bottom: 15px;
       }
 
       .reviews .reviews-container .reviews-card h4 {
