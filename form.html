@@ -1,0 +1,224 @@
+ <section class="build_pro container " >
+        <h2>Build your Ptotoflio</h2>
+    
+        <div class="form container " >
+            <form action="./index.html" method="POST" >
+
+                 <input type="radio"  name="sections" id="section1" value="section1" checked hidden>
+                 <input type="radio"  name="sections" id="section2" value="section2" hidden>
+                 <input type="radio"  name="sections" id="section3" value="section3"  hidden>
+                 <input type="radio"  name="sections" id="section4" value="section4"  hidden>
+
+                <section class="form_sections section1" >
+
+                <h3  >Personal Info</h3>
+                 
+                <div class="group1 name "  >
+                    <label for="name"  >Name</label>
+                    <input id="name" type="text"  name="name" required  >
+                </div>
+                
+                <div class="group1 email "  >
+                    <label for="email"  >Email</label>
+                    <input id="email" type="email" placeholder="example@gmail.com"  name="email" required  pattern="^[a-b0-9+_-%]+@gmail.\com$" title="Only Gmail addresses allowed" >
+                </div>
+                
+                <div class="group1 phone "  >
+                    <label for="phone" >Phone Number</label>
+                    <input id="phone" type="tel"  name="phone" pattern="^[0-9]{11}$" title="Enter 11 digits required " >
+                </div>
+                
+                <div class="group1 lin " >
+                    <label for="LinkedIn"  >LinkedIn</label>
+                   <input id="LinkedIn" type="url"  name="LinkedIn" required  >
+                </div>
+
+                <div class="group1 git " >
+                    <label for="github"  >GitHub</label>
+                    <input id="github" type="url"  name="github" required  >
+                </div>
+                
+
+                <div class="group1 file " >
+                     <label for="pic"  >Profile Picture</label>
+                     <input id="pic" type="file"  name="pic" required  >
+                </div>
+                
+                <div class="buttons"  >
+                <label class="btn" for="section2">Next</label>
+                </div>
+
+                </section>
+
+                
+                <section class="form_sections section2  "  >
+                <h3>Education </h3>
+
+                <div class="group2 Uni" >
+                    <label for="university">University</label>
+                    <input id="university" type="text"  name="university" required  >
+                </div>
+                
+                 <div class="group2 field" >
+                    <label for="study">Field of Study</label>
+                   <input id="study" type="text"  name="study" required  >
+                 </div>
+                
+
+                 <div class="group2 degree" >
+
+                    <label for="degree">Select a degree</label>
+                <select id="degree" name="degree" required >
+                    <option disabled selected >Select your degree</option>
+                    <option value="highschool">High School</option>
+                    <option value="associate">Associate</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="master">Master</option>
+                    <option value="phd">PhD</option>
+                </select>
+                 </div>
+                
+
+                 <div class="group2 startdate" >
+                    <label for="startdate">Graduation Start Date</label>
+                    <input id="startdate" type="date" min="1960-01-01"  name="startdate" required  >
+                 </div>
+                
+
+                 <div class="group2 enddate" >
+                    <label for="enddate"  >Graduation End Date</label>
+                    <input id="enddate" type="date" min="1960-01-01" name="enddate" required  >
+                 </div>
+                
+                <div class="buttons" >
+                     <label class="btn" for="section1">previous</label>
+                     <label class="btn" for="section3">Next</label>
+                 </div>
+                </section>
+
+                <section class="form_sections section3"  >
+                    <h3>Experience</h3>
+
+                    <div class="group3 title" >
+                        <label for="j_title">Job Title</label>
+                        <input type="text"  id="j_title" name="j_title" required >
+                    </div>
+                    
+                    <div class="group3 company" >
+                        <label for="company">Company Name</label>
+                       <input type="company"  id="company" name="company" required >
+                    </div>
+                    
+                    <div class="group3 start" >
+                        <label for="start">Start Date</label>
+                        <input id="start" type="month" min="1960-01-01"  name="start" required  >
+                    </div>
+                    
+                    <div class="cheek_lable group3 end" >
+                        <input id="notend" name="notend" type="checkbox"  >
+                        <label  for="notend">I currently work here </label>
+        
+                        <div class="end_date" style=" grid-column: span 2;" > 
+                      <label for="end"  >End Date</label>
+                     <input id="end" type="month" min="1960-01-01" name="end" required  >
+                     </div>
+                        
+                    </div>
+
+                     
+                    <div class="group3 Desc" >
+                         <label for="descrip">Description</label>
+                         <textarea id="descrip" name="descrip" required rows="6" maxlength="1000" placeholder="Describe your responsibilities, achievements, and tools used in this role"></textarea>
+                    </div>
+                    
+                     <div class="buttons" >
+                        <label class="btn" for="section2">previous</label>
+                     <label class="btn" for="section4">Next</label>
+                     </div>
+
+                    </section>
+
+                  <section class="form_sections section4"  >
+                    <h3>Skills</h3>
+
+                        
+                        <div class="skills" >
+                            <label for="skill">Skill</label>
+                             <input id="skill" type="text" name="skill" required >
+                        </div>
+
+                        <div class="levels" >
+                            <label for="level">Level</label>
+                           <select required name="level" id="level">
+                            <option value="" disabled selected >Select</option>
+                            <option value="">Beginner</option>
+                            <option value="">Intermediate</option>
+                            <option value="">Advanced</option>
+                           </select>
+                        </div>
+
+                        <div class="icon" >
+                            <i class="fa-solid fa-trash"></i>
+
+                        </div>
+
+                    
+
+                
+                        <div class="skills" >
+                            <label for="skill">Skill</label>
+                             <input id="skill" type="text" name="skill" required >
+                        </div>
+
+                        <div class="levels" >
+                            <label for="level">Level</label>
+                           <select required name="level" id="level">
+                            <option value="" disabled selected >Select</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                           </select>
+                        </div>
+
+                        <div class="icon" >
+                            <i class="fa-solid fa-trash"></i>
+
+                        </div>
+
+                  
+                        <div class="skills" >
+                            <label for="skill">Skill</label>
+                             <input id="skill" type="text" name="skill" required >
+                        </div>
+
+                        <div class="levels" >
+                            <label for="level">Level</label>
+                           <select required name="level" id="level">
+                            <option  value="" disabled selected >Select</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                           </select>
+                        </div>
+
+                        <div class="icon" >
+                            <i class="fa-solid fa-trash"></i>
+
+                        </div>
+
+                   
+
+
+                    <div class="add" >
+                    
+                     <i class="fa-solid fa-plus"></i>
+                    <label for="">Add More Skills</label>
+                    </div>
+
+
+                    <div class="buttons" >
+                        <label class="btn" for="section3">previous</label>
+                    <button type="submit" class="btn" > Create your Protoflio </button>
+                    </div>
+                    
+                </section>
