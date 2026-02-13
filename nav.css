@@ -8,6 +8,7 @@ nav{
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2500;
 }nav .logo{
   display: flex;
   align-items: center;
@@ -139,7 +140,6 @@ nav ul .fa-circle-xmark:active{
   visibility: visible;
   transform: translateX(0);
   transition: 0.5s;
-
 }
 .overlay{
   background-color:#1b1c3d6a;
@@ -151,7 +151,7 @@ nav ul .fa-circle-xmark:active{
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: none;
-  z-index: 999;
+  z-index: 2000;
 }
 
 @media (max-width: 850px) {
@@ -174,7 +174,7 @@ nav ul .fa-circle-xmark:active{
    -webkit-backdrop-filter: blur(12px);
    border-right: 1px solid rgba(172, 154, 219, 0.1);
    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
-   z-index: 1000;
+   z-index: 2500;
   } nav ul li{
     width: max-content;
     padding: 10px;
