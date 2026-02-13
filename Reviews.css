@@ -12,8 +12,8 @@
   .reviews .reviews-container {
       display: flex;
       justify-content: space-around;
-    gap: 10px;
-    flex-wrap: wrap;
+      gap: 10px;
+      flex-wrap: wrap;
       padding: 0 20px;
   }
 
@@ -196,4 +196,3 @@
           font-size: 12px;
       }
   }
-
