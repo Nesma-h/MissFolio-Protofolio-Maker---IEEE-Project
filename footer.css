@@ -74,6 +74,13 @@ footer {
   font-size: 0.9rem;
   opacity: 0.8;
 }
+footer,
+.footer-container,
+.footer-bottom {
+  overflow: hidden;
+  position: relative;
+  z-index: -1;            
+}
 
 
 @media (max-width: 850px) {
