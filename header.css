@@ -1,10 +1,10 @@
 .hero {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
-  padding: 100px 50px 50px 50px;
+  padding: 100px 9% ;
   background: linear-gradient(135deg, var(--section-background-color), var(--body-background-color));
+  margin-top: 50px;
 }
 .hero1 {
   max-width: 600px;
