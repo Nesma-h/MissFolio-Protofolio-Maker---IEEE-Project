@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--body-background-color);
+  color: var(--text-color-white);
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--section-background-color), var(--nav-bar-background-color));
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 span.typing {
+  color: var(--text-color-purple);
+  border-right: 2px solid var(--text-color-white);
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: typing 8s steps(18) forwards, blink 0.7s step-end infinite alternate, glow 2s ease-in-out alternate;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 18ch; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px var(--text-color-purple); }
+  50% { text-shadow: 0 0 15px var(--text-color-pink); }
+  100% { text-shadow: 0 0 5px var(--text-color-purple); }
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-color-white);
+  text-shadow: 0 0 5px var(--text-color-purple);
+}
+
+.hero button{
+  background:linear-gradient(90deg, #352d67, #473e84, #726691);
+  color: var(--text-color-white);
+  font-size: 16px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.5s;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero button:hover {
+  background: linear-gradient(90deg, #473e84, #ac9adb, #c08497);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(192, 132, 151, 0.35); 
+}
+
+
+
+.shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle { width:100px; height:100px; background: linear-gradient(45deg, var(--text-color-purple), var(--text-color-pink)); top:10%; left:20%; animation: float 6s ease-in-out infinite, rotateShape 8s linear infinite; }
+.square { width:120px; height:120px; background: linear-gradient(45deg, var(--text-color-pink), var(--text-color-purple)); top:60%; right:25%; border-radius:20%; animation: float 6s ease-in-out infinite, rotateShape 8s linear infinite; }
+.rectangle { width:120px; height:120px; background: var(--text-color-purple); bottom:20%; left:20%; animation: float 6s ease-in-out infinite, rotateShape 8s linear infinite; }
+.triangle { width:0; height:0; border-left:30px solid transparent; border-right:30px solid transparent; border-bottom:60px solid var(--text-color-pink); top:50%; left:10%; animation: float 6s ease-in-out infinite, rotateShape 8s linear infinite; }
+.diamond { width:60px; height:60px; background: var(--text-color-purple); transform: rotate(45deg); top:20%; right:10%; animation: float 6s ease-in-out infinite, rotateShape 8s linear infinite; }
+.small-circle-bottom { width:50px; height:50px; background: linear-gradient(45deg, var(--text-color-purple), var(--text-color-pink)); top:10%; left:55%; animation: float 6s ease-in-out infinite, rotateShape 8s linear infinite; }
+
+
+/* Animations */
+@keyframes float {
+  0%,100% {transform:rotate(180deg);}
+  50% {transform:translateY(-30px);}
+}
+
+@keyframes rotateShape {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero h2 span.typing { font-size: 1.8rem; }
+  .description { font-size: 1.1rem; }
+  .circle, .square, .rectangle, .triangle, .diamond { transform: scale(0.8); }
+  .small-circle-bottom { transform: scale(0.7); }
+  .small-circle-top { transform: scale(0.7); }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 1rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero h2 span.typing { font-size: 1.5rem; }
+  .description { font-size: 1rem; }
+  .circle, .square, .rectangle, .triangle, .diamond { transform: scale(0.6); }
+  .small-circle-bottom { transform: scale(0.6); }
+  .small-circle-top { transform: scale(0.6); }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 1.5rem; }
+  .hero h2 span.typing { font-size: 1.2rem; }
+  .description { font-size: 0.9rem; }
+  .button { padding: 0.6rem 1.5rem; }
+  .circle, .square, .rectangle, .triangle, .diamond { transform: scale(0.5); }
+  .small-circle-bottom { transform: scale(0.5); }
+  .small-circle-top { transform: scale(0.5); }
+}
