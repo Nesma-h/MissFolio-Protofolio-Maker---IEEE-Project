@@ -38,7 +38,7 @@
 <body>
 
   <header>
-<nav>
+    <nav>
       <input type="checkbox" id="click">
       <div class="overlay"></div>
 
@@ -140,12 +140,12 @@
 
             <div class="group1 name ">
               <label for="name">Name</label>
-              <input id="name" type="text" name="name" required>
+              <input id="name" type="text" name="name">
             </div>
 
             <div class="group1 email ">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="example@gmail.com" name="email" required
+              <input id="email" type="email" placeholder="example@gmail.com" name="email"
                 pattern="^[a-b0-9+_-%]+@gmail.\com$" title="Only Gmail addresses allowed">
             </div>
 
@@ -156,12 +156,12 @@
 
             <div class="group1 lin ">
               <label for="LinkedIn">LinkedIn</label>
-              <input id="LinkedIn" type="url" name="LinkedIn" required>
+              <input id="LinkedIn" type="url" name="LinkedIn">
             </div>
 
             <div class="group1 git ">
               <label for="github">GitHub</label>
-              <input id="github" type="url" name="github" required>
+              <input id="github" type="url" name="github">
             </div>
 
             <div class="group1 file">
@@ -169,7 +169,7 @@
                 <i class="fa-solid fa-cloud-arrow-up"></i>
                 <span>Profile Picture</span>
               </label>
-              <input id="pic" type="file" name="pic" required accept="image/*">
+              <input id="pic" type="file" name="pic" accept="image/*">
             </div>
 
             <div class="buttons">
@@ -184,19 +184,19 @@
 
             <div class="group2 Uni">
               <label for="university">University</label>
-              <input id="university" type="text" name="university" required>
+              <input id="university" type="text" name="university">
             </div>
 
             <div class="group2 field">
               <label for="study">Field of Study</label>
-              <input id="study" type="text" name="study" required>
+              <input id="study" type="text" name="study">
             </div>
 
 
             <div class="group2 degree">
 
               <label for="degree">Select a degree</label>
-              <select id="degree" name="degree" required>
+              <select id="degree" name="degree">
                 <option disabled selected>Select your degree</option>
                 <option value="highschool">High School</option>
                 <option value="associate">Associate</option>
@@ -209,13 +209,13 @@
 
             <div class="group2 startdate">
               <label for="startdate">Graduation Start Date</label>
-              <input id="startdate" type="date" min="1960-01-01" name="startdate" required>
+              <input id="startdate" type="date" min="1960-01-01" name="startdate">
             </div>
 
 
             <div class="group2 enddate">
               <label for="enddate">Graduation End Date</label>
-              <input id="enddate" type="date" min="1960-01-01" name="enddate" required>
+              <input id="enddate" type="date" min="1960-01-01" name="enddate">
             </div>
 
             <div class="buttons">
@@ -229,17 +229,17 @@
 
             <div class="group3 title">
               <label for="j_title">Job Title</label>
-              <input type="text" id="j_title" name="j_title" required>
+              <input type="text" id="j_title" name="j_title">
             </div>
 
             <div class="group3 company">
               <label for="company">Company Name</label>
-              <input type="text" id="company" name="company" required>
+              <input type="text" id="company" name="company">
             </div>
 
             <div class="group3 start">
               <label for="start">Start Date</label>
-              <input id="start" type="month" min="1960-01-01" name="start" required>
+              <input id="start" type="month" min="1960-01-01" name="start">
             </div>
 
             <div class="cheek_lable group3 end">
@@ -248,7 +248,7 @@
 
               <div class="end_date" style=" grid-column: span 2;">
                 <label for="end">End Date</label>
-                <input id="end" type="month" min="1960-01-01" name="end" required>
+                <input id="end" type="month" min="1960-01-01" name="end">
               </div>
 
             </div>
@@ -256,7 +256,7 @@
 
             <div class="group3 Desc">
               <label for="descrip">Description</label>
-              <textarea id="descrip" name="descrip" required rows="6" maxlength="1000"
+              <textarea id="descrip" name="descrip" rows="6" maxlength="1000"
                 placeholder="Describe your responsibilities, achievements, and tools used in this role"></textarea>
             </div>
 
@@ -273,12 +273,12 @@
 
             <div class="skills">
               <label for="skill-one">Skill</label>
-              <input id="skill-one" type="text" name="skill" required>
+              <input id="skill-one" type="text" name="skill">
             </div>
 
             <div class="levels">
               <label for="level">Level</label>
-              <select required name="level" id="level">
+              <select name="level" id="level">
                 <option value="" disabled selected>Select</option>
                 <option value="">Beginner</option>
                 <option value="">Intermediate</option>
@@ -296,12 +296,12 @@
 
             <div class="skills">
               <label for="skill-two">Skill</label>
-              <input id="skill-two" type="text" name="skill" required>
+              <input id="skill-two" type="text" name="skill">
             </div>
 
             <div class="levels">
               <label for="level">Level</label>
-              <select required name="level" id="level">
+              <select name="level" id="level">
                 <option value="" disabled selected>Select</option>
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
@@ -317,7 +317,7 @@
 
             <div class="skills">
               <label for="skill-three">Skill</label>
-              <input id="skill-three" type="text" name="skill" required>
+              <input id="skill-three" type="text" name="skill">
             </div>
 
             <div class="levels">
@@ -347,7 +347,8 @@
 
             <div class="buttons">
               <label class="btn" for="section3">previous</label>
-              <button type="submit" class="btn"> Create your Protoflio </button>
+              <button type="submit" class="btn"> <a href="protofolio.html" target="_blank">Create your Protoflio</a>
+              </button>
             </div>
           </section>
 
@@ -470,13 +471,7 @@
 
     </section>
 
-
-
   </main>
-
-
-
-
   <footer>
     <div class="footer-container">
 
@@ -520,15 +515,10 @@
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>© 2026 MissFolio. All Rights Reserved.</p>
     </div>
   </footer>
-
-
-
-
 </body>
 
 </html>
